@@ -1,0 +1,16 @@
+{
+  "name": "angular_setup",
+  "version": "1.0.0",
+  "description": "first angular setup",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server/app.js"
+  },
+  "author": "tracey van haaften",
+  "license": "ISC",
+  "dependencies": {
+    "angular": "^1.5.2",
+    "express": "^4.13.4"
+  }
+}

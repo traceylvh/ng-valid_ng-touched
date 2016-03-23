@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+  <head>
+    <meta charset="utf-8">
+    <title>Angular Build</title>
+
+    <script type="text/javascript" src="/assets/vendors/angular.min.js"></script>
+    <script type="text/javascript" src="/assets/scripts/app.js"></script>
+
+    <link rel="stylesheet" href="../assets/styles/style.css">
+
+  </head>
+  <body>
+    <h1>ng-valid ng-touched</h1>
+
+    <a href="https://docs.angularjs.org/guide/forms">Forms: Using CSS classes</a>
+
+    <div ng-controller="IntroController">
+
+        <p ng-hide="employee.name">Enter your employee info (* required)</p>
+
+        <p ng-show="employee.name">Make sure to do all of it!</p>
+
+        <form novalidate class="css-form">
+
+        Name <input ng-model="employee.name" type="text" placeholder="enter name" required />* <br /><br />
+        ID <input ng-model="employee.employeeNumber" type="text" placeholder="enter id" required />* <br /><br />
+        Salary <input ng-model="employee.salary" type="text" placeholder="enter salary" />
+
+        <button ng-click="saveEmployee(employee)">Save</button>
+
+
+        </form>
+
+        <div ng-repeat="item in employeeArray">
+          <p>
+              {{ item.name }}, {{ item.employeeNumber }}, {{ item.salary }}
+          </p>
+      </div>
+
+    </div>
+
+  </body>
+</html>
